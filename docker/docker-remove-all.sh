@@ -9,6 +9,9 @@
 # - All networks not used by at least one container
 # - All dangling and unused images
 # - All build cache
+#
+# Do not execute it as root! It won't do anything if you run Docker as a regular
+# user. Execute it as your regular user instead.
 # ------------------------------------------------------------------------------
 
 # Check if Docker is installed
