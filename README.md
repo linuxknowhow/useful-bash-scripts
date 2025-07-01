@@ -9,7 +9,7 @@ This repository contains Bash scripts organized by category to help automate com
 - docker: Scripts for managing Docker containers and images
 - ffmpeg: Various media conversion and manipulation scripts
 - lan: Network configuration utilities
-- linux-server: Server management tools
+- linux: Linux management tools
 - maintenance: System cleanup and maintenance scripts
 - mysql: Database management scripts
 - php: start a local http server, etc.
