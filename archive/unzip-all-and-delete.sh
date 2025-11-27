@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # ------------------------------------------------------------------------------
-# unzip-all.sh
+# unzip-all-and-delete.sh
 # ------------------------------------------------------------------------------
-# Extract every ZIP archive in the current directory into its own sub-directory.
-# The script is intentionally non-interactive: existing files are overwritten so
-# batch jobs never hang waiting for user confirmation.
+# Extract every ZIP archive in the current directory into its own sub-directory
+# and delete each archive after a successful extraction. The script is
+# intentionally non-interactive so batch jobs never block waiting for user
+# confirmation.
 # ------------------------------------------------------------------------------
 
 set -euo pipefail
@@ -33,5 +34,7 @@ for file in "${archives[@]}"; do
     mkdir -p "$dir"
     # -q: quiet, -o: overwrite existing files without prompting
     unzip -q -o "$file" -d "$dir"
+    rm -f "$file"
+    echo "Deleted '$file'."
 done
 
