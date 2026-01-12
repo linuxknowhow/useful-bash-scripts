@@ -9,4 +9,4 @@ yt-dlp \
   --cookies-from-browser firefox \
   --js-runtimes node \
   --output "%(uploader).50B - %(upload_date>%Y-%m-%d)s - %(title).100B [%(id)s].%(ext)s" \
-  -- "$@"
+  "$@"
